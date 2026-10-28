@@ -1,0 +1,14 @@
+{
+  "version": "equivalencias_gate.v1",
+  "regra": "Gate gravado antes da ADR 0018 (sem modelos_juizes_sha256) vale se seu modelos_sha256 (arquivo modelos.v1.json inteiro) consta aqui e o modelos_juizes_sha256 registrado for igual ao atual. Os demais componentes da assinatura continuam exigindo igualdade exata. modelos_juizes_sha256 = SHA-256 do JSON canonico (sort_keys, ensure_ascii=false, separadores ',' e ':') das entradas juiz_A e juiz_B.",
+  "equivalencias": [
+    {
+      "gate": "qualificacao_juizes_20261022T131401Z",
+      "modelos_sha256": "7bb3e6d24772afbc0e17ac9e8e46530b331e08b30d2fa8434ee3700509e6e135",
+      "modelos_juizes_sha256": "95275d5c803695e0c8b53f7f66041cf2d9d425742f2d1e0e09185a75db46a6fd",
+      "commit_registro": "b7b324c598d52da7804070f6e8d6a0c599373b91",
+      "data": "2026-10-22",
+      "motivo": "Decisao do autor (22/10/2026, ADR 0018): elevar o max_tokens do tutor para 6000 sem requalificar os juizes; o gate passa a assinar so as entradas dos juizes no registro."
+    }
+  ]
+}

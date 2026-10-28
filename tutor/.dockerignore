@@ -1,0 +1,16 @@
+**
+!pyproject.toml
+!src/
+!src/**
+!tests/
+!tests/**
+!avaliacao/
+!avaliacao/exercicios/
+!avaliacao/exercicios/**
+!avaliacao/perfis/
+!avaliacao/perfis/**
+!avaliacao/roteiros/
+!avaliacao/roteiros/**
+!docker/
+!docker/backend/
+!docker/backend/**

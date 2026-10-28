@@ -1,0 +1,29 @@
+{
+  "id": "E01",
+  "version": "1.1.0",
+  "frontend_exercise_id": "condicionais-par-impar",
+  "track_id": "condicionais",
+  "title": "Par ou ímpar",
+  "concept": "Condicionais e operador de resto",
+  "statement": "Em Python, escreva uma função classificar_paridade(numero) que retorne 'par' quando o inteiro recebido for divisível por 2 e 'ímpar' nos demais casos.",
+  "objective": "Relacionar o resto da divisão por dois à paridade.",
+  "function_name": "classificar_paridade",
+  "reference_file": "solucao_referencia.py",
+  "reference_sha256": "3241a0384a7a29f49231965d97b2e35dbd40f5fbdf6ce877b66d045c1603722d",
+  "hidden_tests": [
+    {"id": "zero", "args": [0], "expected": "par"},
+    {"id": "par_positivo", "args": [8], "expected": "par"},
+    {"id": "impar_positivo", "args": [7], "expected": "ímpar"},
+    {"id": "par_negativo", "args": [-4], "expected": "par"},
+    {"id": "impar_negativo", "args": [-3], "expected": "ímpar"}
+  ],
+  "mutants": {
+    "divisao_em_vez_de_modulo": "def classificar_paridade(numero):\n    return 'par' if numero / 2 == 0 else 'ímpar'",
+    "condicao_invertida": "def classificar_paridade(numero):\n    return 'ímpar' if numero % 2 == 0 else 'par'",
+    "atribuicao_na_condicao": "def classificar_paridade(numero):\n    if numero % 2 = 0:\n        return 'par'\n    return 'ímpar'"
+  },
+  "essential_features": ["resto da divisão por dois", "comparação com zero", "retorno par ou ímpar"],
+  "essential_patterns": ["%\\s*2|resto.{0,30}(?:2|dois)", "==\\s*0|igual a zero|resto zero", "(?:retorn|devolv).{0,35}par.{0,50}[ií]mpar|par.{0,20}senão.{0,20}[ií]mpar"],
+  "allowed_concepts": ["módulo", "comparação", "if/else", "retorno"],
+  "next_steps": ["Perguntar o significado do resto", "Solicitar teste com zero ou número negativo", "Indicar a condição sem fornecer a função completa"]
+}

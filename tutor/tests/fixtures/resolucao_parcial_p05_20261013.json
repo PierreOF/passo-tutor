@@ -1,0 +1,153 @@
+{
+  "_origem": {
+    "descricao": "Extracao declarada de PILOTO-E02-P05 (piloto_consistencia_20261013) para regressao. Nao e novo dado experimental nem reconstrucao integral das saidas originais dos modelos.",
+    "arquivo": "avaliacao/dados_brutos/piloto_consistencia_20261013/episodes.jsonl",
+    "arquivo_sha256": "0a6df6689370ff4a11f4a16787456fc1be5b2750504aa104741cec16f77632b6",
+    "episode_id": "PILOTO-E02-P05",
+    "session_id": "1da2ccca-154f-4934-9003-4cf6b5c48c54",
+    "diagnosis_hash": "9bd5207d0eac8e51f5db6ea62d12b02e7fbe10314d258a5d50b2d5c9fbf591ab",
+    "scope_hash": "7fdff7840ba7ce0867fe5733809bba90851422fdf3b448c6b1954502e6d026af",
+    "correction_policy_version": "1.0.0"
+  },
+  "exercise": {
+    "id": "repeticao-media-notas",
+    "trackId": "repeticao",
+    "title": "Média de notas positivas",
+    "concept": "Repetição, acumuladores e condição de guarda",
+    "statement": "Em Python, escreva uma função media_notas_positivas(notas) que receba uma lista de números e retorne a média somente das notas estritamente maiores que zero. Caso não exista nota válida, retorne None.",
+    "objective": "Separar filtro, soma, contagem e caso sem valores válidos.",
+    "starterCode": ""
+  },
+  "observado": {
+    "n0b": {
+      "resolution_criterion": "A resposta deve oferecer uma explicação textual que descreva um plano passo a passo para implementar a função, cobrindo: iteração pela lista, uso de condição para filtrar notas > 0, acumulação separada de soma e contagem, e decisão final sobre o retorno (média ou None). A explicação não deve conter código Python completo, mas pode incluir fragmentos ilustrativos muito simples (como 'if nota > 0:') desde que integrados à explicação conceitual. Deve evitar proibir explicitamente conceitos proibidos (como list comprehensions) e focar nos permitidos (repetição, acumuladores, condição de guarda).",
+      "requires_code_change": false
+    },
+    "turnos": [
+      {
+        "turn": 1,
+        "student_message": "Eu não sei por onde começar. A função precisa calcular a média das notas maiores que zero, mas não tenho certeza como filtrar essas notas da lista e depois somar e contar elas. Preciso de ajuda para planejar o primeiro passo.",
+        "student_code": ""
+      },
+      {
+        "turn": 2,
+        "student_message": "Acho que preciso de uma variável para a soma das notas válidas e outra para contar quantas notas válidas tem. Inicializo a soma como 0 e a contagem como 0? Tipo assim: soma = 0 e count = 0. Isso é o primeiro passo?",
+        "student_code": ""
+      }
+    ],
+    "tutor_respostas_publicadas": [
+      "Antes de pensar no loop, quais duas variáveis você precisaria inicializar para acumular a soma e contar as notas válidas?",
+      "Você identificou corretamente o primeiro passo: inicializar duas variáveis, como `soma = 0` e `contagem = 0`, para acumular a soma e a quantidade de notas válidas. Isso demonstra que você planejou a parte dos acumuladores, um elemento central da lógica necessária."
+    ],
+    "n2_t2_resolution_evidence": "O estudante identificou corretamente a necessidade de duas variáveis acumuladoras (soma e contagem) e propôs inicializá-las com zero, o que é um componente essencial do planejamento inicial solicitado no critério de resolução. Isso demonstra um avanço na estruturação lógica para separar a soma e a contagem, atendendo parcialmente ao passo de planejamento.",
+    "eventos_preservados": [
+      {
+        "conversation_id": "1da2ccca-154f-4934-9003-4cf6b5c48c54",
+        "turn": 1,
+        "agent": "N2_transition",
+        "status": "ok",
+        "mode": "PROBING",
+        "gap_resolved": false,
+        "plan_sha256": "caa68d27a13efe97e0ff995332768364d5b18980ca3144428cc2e131d9cd786a",
+        "resolution_evidence_sha256": null,
+        "resolution_evidence_present": false,
+        "resolution_evidence": ""
+      },
+      {
+        "conversation_id": "1da2ccca-154f-4934-9003-4cf6b5c48c54",
+        "turn": 1,
+        "agent": "publication_barrier",
+        "status": "approved",
+        "rewrite": 0,
+        "n1v_approved": true,
+        "barrier_approved": true,
+        "candidate_exposure_level": 1,
+        "displayed_exposure_level": 1,
+        "mode": "PROBING",
+        "reason": "aprovada"
+      },
+      {
+        "conversation_id": "1da2ccca-154f-4934-9003-4cf6b5c48c54",
+        "turn": 2,
+        "agent": "N2_transition",
+        "status": "ok",
+        "mode": "CLOSING_RESOLVED",
+        "gap_resolved": true,
+        "plan_sha256": "7259723bc01e6f42fd09ae8e4759dcaf45499ebe60def087d1a9f912d31ce065",
+        "resolution_evidence_sha256": "d0b87c7c4129aae748b57f4622626ff5a98f86905ff314b89fb10527127e1cfe",
+        "resolution_evidence_present": true,
+        "resolution_evidence": "O estudante identificou corretamente a necessidade de duas variáveis acumuladoras (soma e contagem) e propôs inicializá-las com zero, o que é um componente essencial do planejamento inicial solicitado no critério de resolução. Isso demonstra um avanço na estruturação lógica para separar a soma e a contagem, atendendo parcialmente ao passo de planejamento."
+      },
+      {
+        "conversation_id": "1da2ccca-154f-4934-9003-4cf6b5c48c54",
+        "turn": 2,
+        "agent": "publication_barrier",
+        "status": "approved",
+        "rewrite": 0,
+        "n1v_approved": true,
+        "barrier_approved": true,
+        "candidate_exposure_level": 1,
+        "displayed_exposure_level": 1,
+        "mode": "CLOSING_RESOLVED",
+        "reason": "aprovada"
+      }
+    ],
+    "estado_final": {
+      "conceptInDoubt": "Repetição, acumuladores e condição de guarda",
+      "difficultyType": "planejamento inicial",
+      "helpLevel": 2,
+      "directSolutionRequests": 0,
+      "allowedExposureLevel": 1,
+      "shortHistory": [
+        "Eu não sei por onde começar. A função precisa calcular a média das notas maiores que zero, mas não tenho certeza como filtrar essas notas da lista e depois somar e contar elas. Preciso de ajuda para planejar o primeiro passo.",
+        "Acho que preciso de uma variável para a soma das notas válidas e outra para contar quantas notas válidas tem. Inicializo a soma como 0 e a contagem como 0? Tipo assim: soma = 0 e count = 0. Isso é o primeiro passo?"
+      ],
+      "mode": "CLOSING_RESOLVED",
+      "status": "encerrada_resolvida",
+      "countableTurns": 2,
+      "gapResolved": true
+    }
+  },
+  "decomposicao_v2_regressao": {
+    "_nota": "Interpretacao para regressao definida na spec de 13/10/2026; o schema v2 nao existia no dado original.",
+    "contract_version": "2.0.0",
+    "resolution_requirements": [
+      {
+        "requirement_id": "R01",
+        "description": "Explicar como percorrer as notas da lista",
+        "evidence_source": "student_message"
+      },
+      {
+        "requirement_id": "R02",
+        "description": "Explicar que somente notas maiores que zero entram no cálculo",
+        "evidence_source": "student_message"
+      },
+      {
+        "requirement_id": "R03",
+        "description": "Explicar a soma separada dos valores válidos",
+        "evidence_source": "student_message"
+      },
+      {
+        "requirement_id": "R04",
+        "description": "Explicar a contagem dos valores válidos",
+        "evidence_source": "student_message"
+      },
+      {
+        "requirement_id": "R05",
+        "description": "Explicar média com contagem positiva e None sem valores válidos",
+        "evidence_source": "student_message"
+      }
+    ],
+    "status_t2": {
+      "R01": "pending",
+      "R02": "pending",
+      "R03": "satisfied",
+      "R04": "satisfied",
+      "R05": "pending"
+    },
+    "quotes_t2": {
+      "R03": "uma variável para a soma das notas válidas",
+      "R04": "outra para contar quantas notas válidas tem"
+    }
+  }
+}

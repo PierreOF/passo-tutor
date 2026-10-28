@@ -1,0 +1,29 @@
+# Segredos e ambientes locais
+.env
+tutor/frontend/.env.local
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Artefatos gerados
+build/
+dist/
+*.egg-info/
+node_modules/
+tutor/frontend/dist/
+tutor/frontend/vite-server*.log
+tutor/frontend/.vite-local.*.log
+*.tsbuildinfo
+tmp/
+
+# Resultados da avaliação (gerados localmente, nunca versionados)
+pesquisa/11_avaliacao/dados_brutos/*
+pesquisa/11_avaliacao/dados_processados/*
+pesquisa/11_avaliacao/resultados/*
+!pesquisa/11_avaliacao/dados_brutos/.gitkeep
+!pesquisa/11_avaliacao/dados_processados/.gitkeep
+!pesquisa/11_avaliacao/resultados/.gitkeep

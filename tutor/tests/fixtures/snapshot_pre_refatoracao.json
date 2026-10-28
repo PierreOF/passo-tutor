@@ -1,0 +1,374 @@
+{
+  "id": "snapshot-pre-refatoracao",
+  "domain_id": "cs1-introducao-programacao",
+  "scope": {
+    "domain_id": "cs1-introducao-programacao",
+    "topic": "estruturas de controle: comandos de seleção",
+    "allowed_concepts": [
+      "condicional",
+      "módulo"
+    ],
+    "prohibited_topics": [
+      "funções avançadas"
+    ],
+    "config_version": "1.2.0",
+    "config_sha256": "0cd013c9f54be0f8425e6d4aff3fb79c5c311f39dd9e0919eaab20c042eee0a3"
+  },
+  "state": {
+    "concept_in_doubt": "paridade",
+    "difficulty_type": "lógica",
+    "help_level": 2,
+    "direct_solution_requests": 0,
+    "allowed_exposure_level": 3,
+    "short_history": [
+      "Não sei testar se o número é par"
+    ],
+    "mode": "PROBING",
+    "status": "continuar",
+    "countable_turns": 1,
+    "gap_resolved": false
+  },
+  "messages": [
+    {
+      "id": "8771455b-b844-4b4c-9315-d22c50fbbcd9",
+      "role": "student",
+      "text": "Não sei testar se o número é par",
+      "createdAt": "2026-10-19T20:46:20.947643+00:00"
+    },
+    {
+      "id": "26e4d3b2-e3b8-4895-a878-771c8ac2674f",
+      "role": "tutor",
+      "text": "Que resto 4 e 5 produzem ao dividir por 2?",
+      "createdAt": "2026-10-19T20:46:20.947643+00:00",
+      "kind": "question"
+    }
+  ],
+  "max_turns": 10,
+  "diagnosis": {
+    "claim_text": "não identificou a condição",
+    "gap_type": "conceitual",
+    "gap_explanation": "não relacionou resto zero a paridade",
+    "resolution_criterion": "explicar a regra com exemplo",
+    "requires_code_change": false,
+    "contract_version": "4.0.0",
+    "resolution_requirements": [
+      {
+        "requirement_id": "R01",
+        "description": "Explicar a regra de paridade com um exemplo"
+      }
+    ]
+  },
+  "logs": [
+    {
+      "run_id": "interactive",
+      "conversation_id": "snapshot-pre-refatoracao",
+      "student_message": "Não sei testar se o número é par",
+      "state_before": {
+        "concept_in_doubt": "não identificado",
+        "difficulty_type": "não identificado",
+        "help_level": 1,
+        "direct_solution_requests": 0,
+        "allowed_exposure_level": 1,
+        "short_history": [],
+        "mode": "PROBING",
+        "status": "continuar",
+        "countable_turns": 0,
+        "gap_resolved": false
+      },
+      "state_after": {
+        "concept_in_doubt": "paridade",
+        "difficulty_type": "lógica",
+        "help_level": 2,
+        "direct_solution_requests": 0,
+        "allowed_exposure_level": 3,
+        "short_history": [
+          "Não sei testar se o número é par"
+        ],
+        "mode": "PROBING",
+        "status": "continuar",
+        "countable_turns": 1,
+        "gap_resolved": false
+      },
+      "allowed_exposure_level": 3,
+      "candidate_exposure_level": 5,
+      "sanitizer_reason": "aprovada",
+      "final_exposure_level": 1,
+      "final_response": "Que resto 4 e 5 produzem ao dividir por 2?",
+      "internal_solution_logged": false,
+      "attempt_id": "1",
+      "n0a_scope": {
+        "domain_id": "cs1-introducao-programacao",
+        "topic": "estruturas de controle: comandos de seleção",
+        "allowed_concepts": [
+          "condicional",
+          "módulo"
+        ],
+        "prohibited_topics": [
+          "funções avançadas"
+        ],
+        "config_version": "1.2.0",
+        "config_sha256": "0cd013c9f54be0f8425e6d4aff3fb79c5c311f39dd9e0919eaab20c042eee0a3"
+      },
+      "n0b_contract": {
+        "claim_text": "não identificou a condição",
+        "gap_type": "conceitual",
+        "gap_explanation": "não relacionou resto zero a paridade",
+        "resolution_criterion": "explicar a regra com exemplo",
+        "requires_code_change": false,
+        "contract_version": "4.0.0",
+        "resolution_requirements": [
+          {
+            "requirement_id": "R01",
+            "description": "Explicar a regra de paridade com um exemplo"
+          }
+        ]
+      },
+      "n1v_decision": "aprovada",
+      "created_at": "2026-10-19T20:46:20.947643+00:00"
+    }
+  ],
+  "events": [
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N0-A",
+      "schema": "n0a_scope",
+      "status": "ok",
+      "attempt_index": 1,
+      "correction_index": 0,
+      "correction_of": null,
+      "correction_policy_version": "1.5.0",
+      "retry_count": 0,
+      "requested_model": "openai/gpt-4o",
+      "effective_model": "openai/gpt-4o-2024-11-20",
+      "provider": "Azure",
+      "generation_id": null,
+      "latency_ms": 0,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "output_sha256": "a89d45cbe025240f671fd82863947fb6a0d59fed4d6a39dbf343619411df90c1"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N0-B",
+      "schema": "n0b_diagnosis",
+      "status": "ok",
+      "attempt_index": 1,
+      "correction_index": 0,
+      "correction_of": null,
+      "correction_policy_version": "1.5.0",
+      "retry_count": 0,
+      "requested_model": "openai/gpt-4o",
+      "effective_model": "openai/gpt-4o-2024-11-20",
+      "provider": "Azure",
+      "generation_id": null,
+      "latency_ms": 0,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "output_sha256": "12f364d2889e056ba130826ec5fad090513f440384f9e673557cd47fb15b0ba9"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "resolution_contract",
+      "status": "adopted",
+      "resolution_contract_version": "4.0.0",
+      "diagnosis_hash": "a61b909affc3a9c2d9eb56b8ece766eea822d017e7b0507ae3ed059ca88f5511"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N2",
+      "schema": "n2_transition",
+      "status": "ok",
+      "attempt_index": 1,
+      "correction_index": 0,
+      "correction_of": null,
+      "correction_policy_version": "1.5.0",
+      "retry_count": 0,
+      "requested_model": "openai/gpt-4o",
+      "effective_model": "openai/gpt-4o-2024-11-20",
+      "provider": "Azure",
+      "generation_id": null,
+      "latency_ms": 0,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "output_sha256": "ef79a7c1768dc6e49c4c396c1d83708037483b104de7b8f0525ac074ad7b134c"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "resolution_guard",
+      "status": "approved",
+      "rule": "requisitos_n0_v2",
+      "resolution_contract_version": "4.0.0",
+      "diagnosis_hash": "a61b909affc3a9c2d9eb56b8ece766eea822d017e7b0507ae3ed059ca88f5511",
+      "satisfied_ids": [],
+      "pending_ids": [
+        "R01"
+      ],
+      "uncertain_ids": [],
+      "gap_resolved": false,
+      "assessments_sha256": "cfbffafd5221cc1435c69d30259a9d28d1c202de68e695a422a561b966484406",
+      "evidence_links": [],
+      "requirement_assessments": [
+        {
+          "requirement_id": "R01",
+          "status": "pending",
+          "reason": "avaliação de teste",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N2_transition",
+      "status": "ok",
+      "mode": "PROBING",
+      "gap_resolved": false,
+      "plan_sha256": "e9aaf156a82f4696606ec29a42bbe8c58ffc5dab742804967ff2d015f04a7e36",
+      "resolution_evidence_sha256": null,
+      "resolution_evidence_present": false,
+      "resolution_evidence": ""
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N1-G",
+      "schema": "n1g_candidate",
+      "status": "ok",
+      "attempt_index": 1,
+      "correction_index": 0,
+      "correction_of": null,
+      "correction_policy_version": "1.5.0",
+      "retry_count": 0,
+      "requested_model": "openai/gpt-4o",
+      "effective_model": "openai/gpt-4o-2024-11-20",
+      "provider": "Azure",
+      "generation_id": null,
+      "latency_ms": 0,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "output_sha256": "b35aa5cb8c179d5ed6c1b37d4ece9567c8a312b576365d9f16fa66e5b7672eac"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N1-V",
+      "schema": "n1v_decision",
+      "status": "ok",
+      "attempt_index": 1,
+      "correction_index": 0,
+      "correction_of": null,
+      "correction_policy_version": "1.5.0",
+      "retry_count": 0,
+      "requested_model": "openai/gpt-4o",
+      "effective_model": "openai/gpt-4o-2024-11-20",
+      "provider": "Azure",
+      "generation_id": null,
+      "latency_ms": 0,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "output_sha256": "40cb4188f4b57b5847b6dd144755e8f4acc9bb91824984c65eb7977c9a48ae7b"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "publication_barrier",
+      "status": "rejected",
+      "rewrite": 0,
+      "n1v_approved": true,
+      "barrier_approved": false,
+      "candidate_exposure_level": 5,
+      "displayed_exposure_level": 1,
+      "mode": "PROBING",
+      "reason": "nivel_5_bloqueado",
+      "resolution_check": "not_applicable"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N1-G",
+      "schema": "n1g_candidate",
+      "status": "ok",
+      "attempt_index": 2,
+      "correction_index": 0,
+      "correction_of": null,
+      "correction_policy_version": "1.5.0",
+      "retry_count": 0,
+      "requested_model": "openai/gpt-4o",
+      "effective_model": "openai/gpt-4o-2024-11-20",
+      "provider": "Azure",
+      "generation_id": null,
+      "latency_ms": 0,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "output_sha256": "88c916f6c96b585b7eb13e54fec9410403ba0c79a1d627af324be5fd3708218c"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "N1-V",
+      "schema": "n1v_decision",
+      "status": "ok",
+      "attempt_index": 2,
+      "correction_index": 0,
+      "correction_of": null,
+      "correction_policy_version": "1.5.0",
+      "retry_count": 0,
+      "requested_model": "openai/gpt-4o",
+      "effective_model": "openai/gpt-4o-2024-11-20",
+      "provider": "Azure",
+      "generation_id": null,
+      "latency_ms": 0,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "output_sha256": "18aac41d299b6abb91069e4d613bfff4b407b4f6f11dfe3e8a06f27eb3d87e18"
+    },
+    {
+      "conversation_id": "snapshot-pre-refatoracao",
+      "turn": 1,
+      "agent": "publication_barrier",
+      "status": "approved",
+      "rewrite": 1,
+      "n1v_approved": true,
+      "barrier_approved": true,
+      "candidate_exposure_level": 1,
+      "displayed_exposure_level": 1,
+      "mode": "PROBING",
+      "reason": "aprovada",
+      "resolution_check": "not_applicable"
+    }
+  ],
+  "resolution_contract_version": "4.0.0",
+  "public_evidence_turns": [
+    {
+      "turn": 1,
+      "student_message": "Não sei testar se o número é par"
+    }
+  ],
+  "diagnosis_message": "Não sei testar se o número é par"
+}

@@ -1,0 +1,62 @@
+﻿name: tutor-socratico
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Configure POSTGRES_USER no arquivo .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Configure POSTGRES_PASSWORD no arquivo .env}
+      POSTGRES_DB: passo
+    ports:
+      - "127.0.0.1:${POSTGRES_HOST_PORT:-55432}:5432"
+    volumes:
+      - passo_postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init-test-db.sql:/docker-entrypoint-initdb.d/10-create-test-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
+    networks:
+      - app
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+    image: passo-backend:local
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      TUTOR_HOST: 0.0.0.0
+      TUTOR_PORT: 8000
+      TUTOR_DB_HOST: postgres
+      TUTOR_DB_PORT: 5432
+      TUTOR_REVIEW_ROOT: /app/review_artifacts
+    volumes:
+      - ../pesquisa/11_avaliacao/dados_brutos:/app/review_artifacts/dados_brutos:ro
+      - ../pesquisa/11_avaliacao/dados_processados:/app/review_artifacts/dados_processados:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8000/api/health', timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
+    networks:
+      - app
+
+networks:
+  app:
+
+volumes:
+  passo_postgres_data:
+    # Nome fixo: o projeto se chamava `tcc` até 25/10/2026, e o banco continua neste volume.
+    name: tcc_passo_postgres_data

@@ -1,0 +1,29 @@
+{
+  "version": "modelos.v1",
+  "regra": "Os quatro mais bem colocados de empresas diferentes com pontuacao medida (Supported) no ranking de modelos abertos, nao necessariamente os quatro melhores abertos. Sem regra de substituicao: o modelo e definitivo; so a grafia do slug no OpenRouter e conferida pela descoberta de rotas. Por papel: provider_slug = prefixo da tag do endpoint (rota fixada); provider_nome = nome de exibicao do provedor (ex.: Z.AI), usado na conferencia de /generation. So o provedor e fixado, nao a quantizacao. reasoning_effort = esforco de raciocinio enviado ao OpenRouter como reasoning.effort (minimal, low, medium, high; null = nao enviar).",
+  "fonte": {"url": "https://benchlm.ai/best/open-source", "acesso": "2026-10-20", "metodo": "BenchAlign v5.8"},
+  "tutor": {
+    "modelo": "qwen/qwen3.8-2.4t-a95b", "nome_ranking": "Qwen3.8 Max", "nome_openrouter": "Qwen3.8 2.4T A95B", "empresa": "Alibaba", "familia": "alibaba",
+    "provider_slug": "siliconflow", "provider_nome": "SiliconFlow", "temperature": 0, "max_tokens": 6000, "reasoning_effort": "low",
+    "ranking": {"posicao": 2, "nota": 69.7, "intervalo_90": [65.63, 73.79], "tipo": "Supported"}
+  },
+  "juiz_A": {
+    "modelo": "z-ai/glm-5.3", "nome_ranking": "GLM-5.3", "empresa": "Z.AI", "familia": "z-ai",
+    "provider_slug": "akashml", "provider_nome": "AkashML", "temperature": 0, "max_tokens": 8000, "reasoning_effort": "low",
+    "ranking": {"posicao": 5, "nota": 67.9, "intervalo_90": [63.47, 72.41], "tipo": "Supported"}
+  },
+  "juiz_B": {
+    "modelo": "deepseek/deepseek-v4.1-flash-1017", "nome_ranking": "DeepSeek V4.1 Flash 1017", "empresa": "DeepSeek", "familia": "deepseek",
+    "provider_slug": "together", "provider_nome": "Together", "temperature": 0, "max_tokens": 8000, "reasoning_effort": "low",
+    "ranking": {"posicao": 6, "nota": 65.7, "intervalo_90": [60.66, 70.64], "tipo": "Supported"}
+  },
+  "aluno": {
+    "modelo": "minimax/minimax-m3", "nome_ranking": "MiniMax M3", "empresa": "MiniMax", "familia": "minimax",
+    "provider_slug": "together", "provider_nome": "Together", "temperature": 0.7, "max_tokens": 300, "reasoning_effort": "low",
+    "ranking": {"posicao": 20, "nota": 55, "intervalo_90": [45.59, 64.37], "tipo": "Supported"}
+  },
+  "configuracao_anterior": {
+    "observacao": "Somente registro historico; nao e lido pelo codigo.",
+    "tutor": "deepseek/deepseek-v3.2", "aluno": "qwen/qwen3-32b", "provider_slug": "siliconflow"
+  }
+}

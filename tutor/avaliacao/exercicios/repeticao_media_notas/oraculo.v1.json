@@ -1,0 +1,30 @@
+{
+  "id": "E02",
+  "version": "1.1.0",
+  "frontend_exercise_id": "repeticao-media-notas",
+  "track_id": "repeticao",
+  "title": "Média de notas positivas",
+  "concept": "Repetição, acumuladores e condição de guarda",
+  "statement": "Em Python, escreva uma função media_notas_positivas(notas) que receba uma lista de números e retorne a média somente das notas estritamente maiores que zero. Caso não exista nota válida, retorne None.",
+  "objective": "Separar filtro, soma, contagem e caso sem valores válidos.",
+  "function_name": "media_notas_positivas",
+  "reference_file": "solucao_referencia.py",
+  "reference_sha256": "2f6803bf77125971cfdab6d2ab6e00ce374160c53921ccf228e07c59a69614fb",
+  "hidden_tests": [
+    {"id": "vazia", "args": [[]], "expected": null},
+    {"id": "somente_zero", "args": [[0, 0]], "expected": null},
+    {"id": "somente_negativos", "args": [[-2, -1]], "expected": null},
+    {"id": "zero_e_positivo", "args": [[0, 10]], "expected": 10},
+    {"id": "mista", "args": [[-2, 2, 4]], "expected": 3},
+    {"id": "unico_positivo", "args": [[5]], "expected": 5}
+  ],
+  "mutants": {
+    "divide_total": "def media_notas_positivas(notas):\n    validas = [n for n in notas if n > 0]\n    return sum(validas) / len(notas) if validas else None",
+    "inclui_zero": "def media_notas_positivas(notas):\n    validas = [n for n in notas if n >= 0]\n    return sum(validas) / len(validas) if validas else None",
+    "sem_guarda": "def media_notas_positivas(notas):\n    validas = [n for n in notas if n > 0]\n    return sum(validas) / len(validas)"
+  },
+  "essential_features": ["filtrar valores maiores que zero", "somar valores válidos", "contar valores válidos", "dividir com proteção para lista sem positivos"],
+  "essential_patterns": [">\\s*0|maior(?:es)? que zero|estritamente positiv", "som[ae]|acumul", "cont(?:a|agem)|len\\(", "divid|/|nenhum positivo|sem positivos"],
+  "allowed_concepts": ["for", "acumulador", "contador", "condicional", "divisão protegida"],
+  "next_steps": ["Perguntar quais valores participam", "Separar soma e contador", "Analisar o caso sem positivos"]
+}

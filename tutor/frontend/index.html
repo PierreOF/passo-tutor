@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#141019" />
+    <meta name="description" content="Passo — tutor socrático para aprender programação construindo o próprio raciocínio." />
+    <title>Passo — Tutor socrático</title>
+  </head>
+  <body>
+    <script>
+      const savedTheme = localStorage.getItem('passo:theme')
+      const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark'
+      document.documentElement.dataset.theme = initialTheme
+      document.documentElement.style.colorScheme = initialTheme
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

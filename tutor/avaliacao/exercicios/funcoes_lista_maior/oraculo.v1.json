@@ -1,0 +1,30 @@
+{
+  "id": "E03",
+  "version": "1.2.0",
+  "frontend_exercise_id": "funcoes-lista-maior",
+  "track_id": "listas-funcoes",
+  "title": "Maior valor da lista",
+  "concept": "Listas, inicialização e comparação iterativa",
+  "statement": "Em Python, escreva uma função maior_valor(valores) que retorne o maior número de uma lista não vazia sem utilizar a função max.",
+  "objective": "Manter o maior valor observado durante um percurso.",
+  "function_name": "maior_valor",
+  "reference_file": "solucao_referencia.py",
+  "reference_sha256": "979e8fff3c584009189e58fcedaedf514174c0ee46814a459cf6aa27349d323a",
+  "hidden_tests": [
+    {"id": "um_elemento", "args": [[7]], "expected": 7},
+    {"id": "todos_negativos", "args": [[-8, -3, -5]], "expected": -3},
+    {"id": "empate", "args": [[4, 4, 2]], "expected": 4},
+    {"id": "com_zero", "args": [[-2, 0, -1]], "expected": 0},
+    {"id": "crescente", "args": [[1, 3, 5]], "expected": 5},
+    {"id": "decrescente", "args": [[5, 3, 1]], "expected": 5}
+  ],
+  "mutants": {
+    "inicia_zero": "def maior_valor(valores):\n    maior = 0\n    for valor in valores:\n        if valor > maior:\n            maior = valor\n    return maior",
+    "comparacao_invertida": "def maior_valor(valores):\n    maior = valores[0]\n    for valor in valores[1:]:\n        if valor < maior:\n            maior = valor\n    return maior",
+    "retorno_precoce": "def maior_valor(valores):\n    maior = valores[0]\n    for valor in valores[1:]:\n        if valor > maior:\n            maior = valor\n        return maior\n    return maior"
+  },
+  "essential_features": ["inicializar com elemento da lista", "percorrer os valores", "comparar com o maior atual", "substituir apenas quando maior"],
+  "essential_patterns": ["primeiro elemento|valores\\[0\\]", "percorr|for\\s+", "compar|>\\s*maior", "atualiz|substitu|maior\\s*=\\s*valor(?:\\b|es\\s*\\[(?!\\s*0\\s*\\]))"],
+  "allowed_concepts": ["parâmetro", "iteração", "acumulador", "comparação"],
+  "next_steps": ["Perguntar qual inicialização funciona com negativos", "Explorar a invariante maior visto até agora", "Solicitar teste com lista toda negativa"]
+}

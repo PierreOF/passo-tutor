@@ -1,0 +1,114 @@
+{
+  "version": "1.3.0",
+  "gap_type_definitions": {
+    "sem_evidencia": "O estudante afirma, propõe ou pede algo sem apresentar raciocínio, tentativa, execução ou teste que o sustente (inclui dizer que entendeu sem demonstrar e pedir a solução sem tentativa).",
+    "evidencia_fraca": "O estudante apresenta raciocínio, tentativa ou teste, mas insuficiente para sustentar a conclusão (por exemplo, um único caso testado, explicação vaga ou código parcial).",
+    "contradicao": "O que o estudante afirma ou espera conflita com a semântica de Python, com o enunciado ou com o comportamento observável do próprio código."
+  },
+  "gap_domain_types": {
+    "concepcao_equivocada": "Crença incorreta sobre um conceito ou operador da linguagem.",
+    "erro_no_codigo": "Código do estudante com defeito que ele não localiza ou não explica.",
+    "compreensao_nao_demonstrada": "Declara compreensão sem demonstrá-la.",
+    "planejamento": "Não consegue decompor o problema ou dar o primeiro passo.",
+    "conceito_desconhecido": "Desconhece o conceito ou a construção necessária."
+  },
+  "evidence_forms": [
+    "prever a saída de um trecho de código",
+    "rastrear valores de variáveis passo a passo",
+    "executar ou testar o próprio código com um caso escolhido",
+    "voltar ao enunciado ou à própria fala anterior"
+  ],
+  "domain_id": "cs1-introducao-programacao",
+  "discipline": "Programação I (SOF0003G), 1º período do Bacharelado em Engenharia de Software da UPE, Campus Garanhuns",
+  "source": {
+    "document": "Projeto Pedagógico do Curso de Bacharelado em Engenharia de Software, UPE Campus Garanhuns, 2022",
+    "file": "docs/PPC_Engenharia_de_Software_2022.pdf",
+    "topics_from": "Programação I (SOF0003G, 1º período), conteúdos programáticos 1 a 11, p. 49-50",
+    "not_yet_covered_from": "Programação 2 (SOF0010G, 2º período, p. 64-65); Algoritmos e Estruturas de Dados (SOF0018G, 3º período, p. 67); Programação 3 (SOF0019G, 3º período, p. 79)",
+    "language_note": "A bibliografia básica de Programação I usa Python; vetores correspondem às listas de Python."
+  },
+  "topics": [
+    "algoritmos versus programas",
+    "elementos básicos de um programa: tipos simples, variáveis, constantes, identificadores, expressões aritméticas e lógicas, atribuição, leitura e escrita de dados",
+    "formato, documentação e robustez de um programa",
+    "estruturas de controle: comandos de seleção",
+    "subprogramas: procedimentos, funções, passagem de parâmetros e escopo léxico",
+    "estruturas de controle: comandos de repetição",
+    "manipulação de strings",
+    "tipos estruturados de dados: vetores, matrizes e registros",
+    "tipos de dados definidos pelo usuário",
+    "recursividade",
+    "manipulação de arquivos"
+  ],
+  "not_yet_covered": [
+    "programação orientada a objetos: classes, objetos, herança e polimorfismo (Programação 2, 2º período)",
+    "tratamento de exceções (Programação 2, 2º período)",
+    "eventos e interface gráfica (Programação 2, 2º período)",
+    "análise de algoritmos e complexidade assintótica (Algoritmos e Estruturas de Dados, 3º período)",
+    "estruturas de dados: pilhas, filas, árvores e grafos (Algoritmos e Estruturas de Dados, 3º período)",
+    "algoritmos de ordenação e de busca (Algoritmos e Estruturas de Dados, 3º período)",
+    "programação funcional: funções de alta ordem, imutabilidade e avaliação preguiçosa (Programação 3, 3º período)"
+  ],
+  "python_mapping": {
+    "status": "Tradução de cada item da ementa para construções de Python: interpretação do autor, não texto do PPC.",
+    "basis": "A bibliografia básica de Programação I (p. 50) adota Python (Barry, 2012; Sweigart, 2015; Matthes, 2016); as construções listadas são as que esses livros apresentam para cada item.",
+    "items": {
+      "algoritmos versus programas": [
+        "algoritmo e pseudocódigo",
+        "programa em Python como implementação do algoritmo"
+      ],
+      "elementos básicos de um programa: tipos simples, variáveis, constantes, identificadores, expressões aritméticas e lógicas, atribuição, leitura e escrita de dados": [
+        "int, float, bool e str",
+        "variáveis e constantes por convenção (nomes em maiúsculas)",
+        "operadores aritméticos (+, -, *, /, //, %, **), relacionais e lógicos (and, or, not)",
+        "atribuição com =",
+        "input() e print()",
+        "conversão de tipos (int(), float(), str())"
+      ],
+      "formato, documentação e robustez de um programa": [
+        "indentação",
+        "comentários e docstrings",
+        "nomes significativos",
+        "validação de entrada"
+      ],
+      "estruturas de controle: comandos de seleção": [
+        "if, elif e else",
+        "condições compostas"
+      ],
+      "subprogramas: procedimentos, funções, passagem de parâmetros e escopo léxico": [
+        "def e return",
+        "funções sem retorno explícito (procedimentos, retornam None)",
+        "parâmetros e argumentos",
+        "objetos mutáveis e imutáveis como argumentos (equivalente à passagem por valor ou por referência)",
+        "escopo local e global"
+      ],
+      "estruturas de controle: comandos de repetição": [
+        "for e while",
+        "range()",
+        "break e continue",
+        "acumuladores e contadores"
+      ],
+      "manipulação de strings": [
+        "indexação e fatiamento",
+        "métodos de str",
+        "concatenação e f-strings"
+      ],
+      "tipos estruturados de dados: vetores, matrizes e registros": [
+        "listas (vetores)",
+        "listas de listas (matrizes)",
+        "tuplas e dicionários (registros)",
+        "percurso, busca e acumulação sobre listas"
+      ],
+      "tipos de dados definidos pelo usuário": [
+        "registros com nome, como namedtuple ou dataclass usados apenas para agrupar dados, sem herança nem polimorfismo"
+      ],
+      "recursividade": [
+        "funções recursivas com caso base"
+      ],
+      "manipulação de arquivos": [
+        "open() e with",
+        "leitura e escrita de arquivos de texto"
+      ]
+    }
+  }
+}
