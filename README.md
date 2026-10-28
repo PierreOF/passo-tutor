@@ -14,6 +14,7 @@ O tutor conversa com estudantes de introdução à programação (Python) sem en
 | [`tutor/tests/`](tutor/tests/) | suíte automatizada, sem chamadas a modelos |
 | [`tutor/frontend/`](tutor/frontend/README.md) | interface web em React e TypeScript |
 | [`tutor/docs/desenvolvimento/`](tutor/docs/desenvolvimento/) | operação local e diagramas em draw.io |
+| [`dados/campanha_20261026/`](dados/campanha_20261026/README.md) | transcrições públicas e pareceres dos juízes da campanha do TCC |
 | [`pesquisa/11_avaliacao/`](pesquisa/11_avaliacao/README.md) | pasta onde o instrumento grava os resultados, vazia e fora do Git |
 
 O [README do tutor](tutor/README.md) descreve a arquitetura, o fluxo de um turno e a avaliação com diagramas.
@@ -36,7 +37,7 @@ A criação do administrador, os alunos de teste e a configuração dos modelos 
 
 Este repositório publica, com histórico próprio e sem os documentos internos da pesquisa, a versão usada na campanha de avaliação de 26/10/2026, que o manifesto da campanha registra pelo commit `451b81c` do repositório de desenvolvimento. Em relação a esse commit, `tutor/src/`, `tutor/frontend/` e os arquivos de dados de `tutor/avaliacao/` são idênticos. Mudaram só a documentação e um teste: `test_equivalence_record_matches_registry_at_recorded_commit` consulta o registro de modelos num commit do histórico de desenvolvimento e, aqui, é pulado. Alguns comentários do código citam documentos de método ou decisões internas que não fazem parte desta publicação; o método está descrito no capítulo 3 e nos apêndices do TCC.
 
-Os registros brutos das conversas e dos pareceres da campanha não são publicados. As chaves de acesso aos provedores ficam só no `.env` local.
+As transcrições públicas e os pareceres dos juízes da campanha estão em [`dados/campanha_20261026/`](dados/campanha_20261026/README.md). Os registros brutos, com o estado interno do tutor e as respostas completas dos provedores, não são publicados. As chaves de acesso aos provedores ficam só no `.env` local.
 
 ## Licença
 
